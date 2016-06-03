@@ -24,13 +24,13 @@ The button included in the EdTracker circuit is used for two purposes. First, if
 
 As well as talking joystick-talk to a computer, Motion-Jostick also allows for a serial-USB link that can be used to change the behaviour of the circuit. In the simplest sense that means you can open a serial monitor in the Arduino coding environment, set the speed to 115200 baud, and send control-characters that make it change how the joystick works (just type them in the text box at the top of the serial monitor and click 'Send'). The controls we've implemented are listed below (note that 'v', 'z', 'a' and 'b' are for advanced use, so if you're new to this please just ignore them):
 
-*'v': The circuit responds to this command simply by returning the string "dhhtracker". It's useful if you want to code a program to control the joystick that needs to work out, by itself, which serial port the circuit is connected to.
-*'r': This resets the centre values of the joystick axes, in the same way that holding the button down for over three seconds does.
-*'z': This removes centering functionality, so shouldn't be used unless you want to use mode 'a' below. If you accidentally use this control then you can get back to normal by sending the 'r' command. This function is useful as with the 'a' mode you can make the axes centred around real-world yaw/pitch/roll values.
-*'a': This sets the joystick to scale the axes values to encompass a complete sphere. So, for example, fully left on the X-Axis is 180 degrees left of centre, and fully right is 180 degrees right of centre. You can use this mode to get full Yaw/Pitch/Roll data into the computer, such as to control a 3D model.
-*'b': This is the default operating mode, where the joystick axes are tied to rotations of +/- 45 degrees from the centred value. This is important for use as a control device: for instance, if you're controlling a mouse with a head tracker you only want to turn your head a small amount to move the cursor.
-*'0': This turns off the motion filtering. It is off by default when the circuit boots up.
-*'1' to '9': This sets motion filtering from light (1) to heavy (9). The higher the setting the harder it is to rapidly change the axis values, which is useful for filtering out trembling and spasms. A bit of trial and error testing should help establish the level of filtering needed for a particular person/context.
+* 'v': The circuit responds to this command simply by returning the string "dhhtracker". It's useful if you want to code a program to control the joystick that needs to work out, by itself, which serial port the circuit is connected to.
+* 'r': This resets the centre values of the joystick axes, in the same way that holding the button down for over three seconds does.
+* 'z': This removes centering functionality, so shouldn't be used unless you want to use mode 'a' below. If you accidentally use this control then you can get back to normal by sending the 'r' command. This function is useful as with the 'a' mode you can make the axes centred around real-world yaw/pitch/roll values.
+* 'a': This sets the joystick to scale the axes values to encompass a complete sphere. So, for example, fully left on the X-Axis is 180 degrees left of centre, and fully right is 180 degrees right of centre. You can use this mode to get full Yaw/Pitch/Roll data into the computer, such as to control a 3D model.
+* 'b': This is the default operating mode, where the joystick axes are tied to rotations of +/- 45 degrees from the centred value. This is important for use as a control device: for instance, if you're controlling a mouse with a head tracker you only want to turn your head a small amount to move the cursor.
+* '0': This turns off the motion filtering. It is off by default when the circuit boots up.
+* '1' to '9': This sets motion filtering from light (1) to heavy (9). The higher the setting the harder it is to rapidly change the axis values, which is useful for filtering out trembling and spasms. A bit of trial and error testing should help establish the level of filtering needed for a particular person/context.
 
 ##A note about drifting values
 
