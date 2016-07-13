@@ -4,6 +4,8 @@
 
 Motion-joystick is a simple Arduino Leonardo joystick/gamepad system that uses a digital motion processor to set the joystick axes, with adjustable in-built motion filtering. In that sense it works in a similar way to an air-mouse where, for example, turning the circuit left or right changes the corresponding joystick axis value. We developed it at the Digital Humanities Hub because it has a wide range of uses in arts and especially for disabled artists. For instance, it can be used as a head-tracker for people with disabilities to control art or music software, as well as for game playing and gamified-training.
 
+![Our motion joystick project](./motionjoystick.jpg)
+
 The system should work as any other joystick does in all operating systems that understand how to talk to a USB joystick including Windows, OSX and Linux, as well as many non-iOS phones and tablets. And all of those devices then benefit from motion-filtering without the need for bespoke code on each OS. Thanks to the HTML5 Gamepad API it can even be easily used to control web-content and web-apps on desktop and mobile browsers. There are other open source projects that can say the same too, but we decided to develop our own so that we could extend it to have useful features for use in arts, and particularly by disabled artists, such as:
 
 * The ability to customise the system as an input device, rather than the more common gaming uses.
